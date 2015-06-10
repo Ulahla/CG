@@ -18,7 +18,7 @@ public class Planet {
 		children = new ArrayList<Planet>();
 //		switch(name){
 		
-//		}
+		}
 	}
 
 	public void render(float radius,float r,

@@ -54,8 +54,8 @@ public class Universe implements InteractiveItem {
 		
 		// initialize Planets
 		sun = new Planet("Sun");
-		sun.setChild(earth = new Planet ("Earth"));
-//		earth = new Planet ("Earth");
+//		sun.addChild(earth = new Planet ("Earth"));
+		earth = new Planet ("Earth");
 		
 		
 		lastTime = Sys.getTime();
@@ -147,10 +147,6 @@ public void render() {
 public void finish() {
 	// TODO Auto-generated method stub
 	
-}
-
-public float getSunsize(){
-	return SUNSIZE;
 }
 
 

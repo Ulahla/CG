@@ -15,10 +15,7 @@ public class Planet {
 
 	public Planet(String name) {
 		name = this.name;
-		children = new ArrayList<Planet>();
-//		switch(name){
 		
-//		}
 	}
 
 	public void render(float radius,float r,
@@ -36,9 +33,7 @@ public class Planet {
 		GL11.glRotatef(angle, x, y, z);
 	}
 
-	public void setChild(Planet name) {
-		children.add(name);
+	public void setChild(Planet planet) {
+		children.add(planet);
 	}
-	
-	
 }

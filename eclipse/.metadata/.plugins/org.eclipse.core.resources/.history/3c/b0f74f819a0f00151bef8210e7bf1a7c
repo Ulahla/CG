@@ -54,8 +54,8 @@ public class Universe implements InteractiveItem {
 		
 		// initialize Planets
 		sun = new Planet("Sun");
-		sun.setChild(earth = new Planet ("Earth"));
-//		earth = new Planet ("Earth");
+//		sun.setChild("Earth");
+		earth = new Planet ("Earth");
 		
 		
 		lastTime = Sys.getTime();

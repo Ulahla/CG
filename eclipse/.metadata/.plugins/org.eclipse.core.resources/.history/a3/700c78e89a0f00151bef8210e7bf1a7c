@@ -16,9 +16,6 @@ public class Planet {
 	public Planet(String name) {
 		name = this.name;
 		children = new ArrayList<Planet>();
-//		switch(name){
-		
-//		}
 	}
 
 	public void render(float radius,float r,
