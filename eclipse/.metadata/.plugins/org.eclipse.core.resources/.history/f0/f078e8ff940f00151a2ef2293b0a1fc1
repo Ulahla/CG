@@ -1,0 +1,42 @@
+package sB_exercise2;
+
+import java.util.*;
+import org.lwjgl.opengl.GL11;
+
+import sB_exercise2.GLDrawHelper;
+
+public class Planet  extends Universe{
+	public String name; 
+	ArrayList<Planet> children;
+	public final int SLICES = 20;
+	public final int STACKS = 20;
+
+	public Planet(String name) {
+		name = this.name;
+//		ArrayList<Planet> children = new ArrayList<Planet>();
+		switch (name){
+		case "earth": 
+			render((getSunsize()/10.f), 0, 0, 1.f);
+			break;
+		}
+	}
+
+	public void render(float radius, float r,float g, float b) {
+		GL11.glColor3d(r, g, b);
+		GLDrawHelper.drawSphere(radius, SLICES, STACKS);
+	}
+
+	public void update() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public void rotate(float angle, float x, float y, float z){
+		GL11.glRotatef(angle, x, y, z);
+	}
+
+	public void addChild(Planet planet) {
+//		planet = new Planet(planet);
+		children.add(planet);
+	}
+}
